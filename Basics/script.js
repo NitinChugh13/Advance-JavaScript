@@ -76,11 +76,106 @@
 // someFunction("hi","there!","how are you??");//hi [ 'there!', 'how are you??' ]
 
 //Returning Function Values 
-let addTwoNumbers = (x,y) =>  x+y ;
-let resultArr = [];
-for(let i=0;i<10;i++){
-    let result = addTwoNumbers(i,2*i);
-    resultArr.push(result);
-}
-console.log(resultArr);
+// let addTwoNumbers = (x,y) =>  x+y ;
+// console.log(addTwoNumbers(12,15));
+// let resultArr = [];
+// for(let i=0;i<10;i++){
+//     let result = addTwoNumbers(i,2*i);
+//     resultArr.push(result);
+// }
+// console.log(resultArr);
 
+// let addTwoNumbers = (x,y) =>  {
+//     console.log("Adding...");
+//     return x+y;
+// }
+// console.log(addTwoNumbers(12,15));
+
+//Variable scope in function 
+//let and const are blocked scope 
+// function testAvailability(x){
+//     console.log("Available Here",x);
+// }
+// testAvailability("Hi");
+// console.log("Not Available ",x);//reference error
+
+
+// function testAvailability(){
+//     let y ="Logical Variable";
+//     console.log("Available Here",y);
+// }
+// testAvailability();
+// console.log("Not Available ",y);//reference error
+
+// function testAvailability(){
+//     let y = "I will Return";
+//     console.log("Available here",y);
+//     return y;
+// }
+// let z = testAvailability();
+// console.log(z);
+// console.log(y);//reference error 
+
+
+// function doingStuff(){
+//     if(true){
+//         var x = "local";
+//     }
+//     console.log(x);
+// }
+// doingStuff();
+
+// function doingStuff(){
+//     if(true){
+//         let x = "local";
+//     }
+//     console.log(x);
+// }
+// doingStuff();//reference error
+
+//we can access the variable before initialization using var
+// function doingStuff(){
+//     if(true){
+//         console.log(x);
+//         var x = "local";
+//     }
+// }
+// doingStuff();
+
+// function doingStuff(){
+//     if(true){
+//         console.log(x);
+//         let x = "local";
+//     }
+// }
+// doingStuff();//reference error 
+
+// function doingStuff(){
+//     if(true){
+//         const x = "local";
+//     }
+//     console.log(x);//reference error
+// }
+
+//Global Scope 
+//GLobal variables should not be formed when needed necessirely
+//occupies the memory permanently 
+//in best practices global variables are not used 
+// let globalVariable = "Accessible Everywhere";
+// console.log("Outside Function: ",globalVariable);
+
+// function creatingNewScope(x){
+//     console.log("Acessing global variable in function: ",globalVariable);
+
+// }
+// creatingNewScope("Some parameter");
+// console.log("STill available:",globalVariable);
+
+//global variable can be hide by the local variable
+let x = "Global";
+function doingStuff() {
+    let x = " local";
+    console.log(x);
+}
+doingStuff();
+console.log(x);
