@@ -172,10 +172,145 @@
 // console.log("STill available:",globalVariable);
 
 //global variable can be hide by the local variable
-let x = "Global";
-function doingStuff() {
-    let x = " local";
-    console.log(x);
-}
-doingStuff();
-console.log(x);
+// let x = "Global";
+// function doingStuff() {
+//     let x = " local";
+//     console.log(x);
+// }
+// doingStuff();
+// console.log(x);
+
+//Anonymous Function : A function with no name 
+
+//IIFE (Immediately invoked function expression )
+// (function (){
+//     console.log("IIFE");
+// })();
+
+// (()=>{
+//     console.log("Run right away...");
+// })();
+
+//Recursive Function 
+// function getRecursive(nr){
+//     console.log(nr);
+//     getRecursive(--nr);
+// }
+// getRecursive(3);// infinite recursion because the base condition is minimum 
+// Recursive Function 
+// function getRecursive(nr){
+//     // console.log(nr);
+//     if(nr >0){
+//     getRecursive(--nr);
+//     }
+//     console.log(nr);
+// }
+// getRecursive(3);
+
+// function logRecursion(nr){
+//     console.log("Started function: ",nr);
+//     if(nr>0){
+//         logRecursion(nr-1);
+//     }else{
+//         console.log("Done with recursion");
+//     }
+//     console.log("Ended function: ",nr);
+// }
+// logRecursion(3);
+
+//The performance of recursion is slightly worse than the performance of the regular iteration using a loop .
+//So if this causes a bottleneck situation that would really slow down the application , then you might want to consider a better version 
+
+//Nested Function 
+// function doOuterStuff(nr){
+//     console.log("Outer function");
+// doInnerFunction(nr);
+// function doInnerFunction(x){
+//     let z =10;
+//     console.log(x+7);
+//     console.log("I can access the outer variables:",nr);
+//     console.log("z is not accessible:",z);
+    
+
+// }
+// }
+// doOuterStuff(3);
+// doInnerFunction(3);//reference error it is not scoped as it is inside the outer function 
+
+//Anonymous Function
+//In one scope only one Anonymous function can be formed 
+//Callbacks : passing a function into other as argument 
+
+//Function Call back
+// let functionVarible = function(){
+//     console.log("Not so secret through");
+// };
+// function doFlexibleStuff(executeStuff){
+//     executeStuff();
+//     console.log("Inside the doFLexible");
+// }
+// doFlexibleStuff(functionVarible);
+//synchronous Function : A function which depends upon the execution of other 
+//that is if one stops working , stops the entire working 
+//synchronous means blocking code 
+
+//Inbuilt functions 
+//1] SetTimeOut
+// let youGotThis = function(){
+//     console.log("You are doing really well,keep coding");
+// };
+// setTimeout(youGotThis,1000);
+// setTimeout(youGotThis,2000);
+
+//2]setInterval
+// let youGotThis = function(){
+//         console.log("You are doing really well,keep coding");
+//     };
+//     setTimeout(youGotThis,1000);
+//     setInterval(youGotThis,2000);
+// Quiz
+// let val = 10;
+// function tester(val){
+//     val+=10;
+//     if(val<100){
+//         return tester(val);
+//     }
+//     return val;
+// }
+// console.log(tester(val));
+// console.log(val);
+// let testFunction =function (){
+//     console.log("Hello");
+// }();
+// testFunction();//type error 
+// (function(){
+//     console.log("Welcome");
+// })();
+
+// (function (){
+//     console.log("WElcome");
+// })();
+// (function(){
+//     let firstName = "Laurance";
+// })
+// let result = (function (){
+//     let firstName = "Laurance";
+//     return firstName;
+// })();
+// console.log(result);
+// (function(firstName){
+//     console.log("My name is "+ firstName);
+// })("Laurance");
+
+// let test2 = (num)=> num+5;
+// console.log(test2(14));
+
+var addFive1 = function addFive1(num){
+    return num + 2;
+};
+let addFive2 = (num) => num+2;
+console.log(addFive1(14));
+console.log(addFive2(14));
+
+
+
