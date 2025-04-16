@@ -305,12 +305,15 @@
 // let test2 = (num)=> num+5;
 // console.log(test2(14));
 
-var addFive1 = function addFive1(num){
-    return num + 2;
-};
-let addFive2 = (num) => num+2;
-console.log(addFive1(14));
-console.log(addFive2(14));
+// var addFive1 = function addFive1(num){
+//     return num + 2;
+// };
+// let addFive2 = (num) => num+2;
+// console.log(addFive1(14));
+// console.log(addFive2(14));
+
+
+
 
 
 
