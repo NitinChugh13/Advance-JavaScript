@@ -311,9 +311,3 @@
 // let addFive2 = (num) => num+2;
 // console.log(addFive1(14));
 // console.log(addFive2(14));
-
-
-
-
-
-
