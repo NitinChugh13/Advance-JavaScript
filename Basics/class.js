@@ -190,10 +190,12 @@ class Person{
         console.log("Hi,There!!");
     }
 }
-Person.prototype.getFullName = function(){
+Person.prototype.getFullName = function(){ 
     return this.firstname+" "+this.lastname;
 };
 Person.prototype.favColor = "Blue";
 let p = new Person("Nitin","Chugh");
 console.log(p.getFullName());
-console.log(p.favColor);
+console.log(p.favColor); 
+console.log(p.greet());
+//git push -u origin main  
