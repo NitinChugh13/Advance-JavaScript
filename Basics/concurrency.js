@@ -110,3 +110,52 @@ const promise = new Promise((resolve,reject)=>{
 }); 
 
 //Async and await 
+// with async keyword,we can make a funv=c return a promise.this makes the promise nicer to read and look like synchcronus code.
+// await keyword wait until the promise in down.it only works in asynchronus code.
+// function saySomething(x){
+//     return new Promise(resolve =>{
+//         setTimeout(() =>{
+//             resolve("something" +x);
+//         }, 2000);
+//     });
+// }
+// async function talk(x) {
+//     const words= await saySomething(x);
+//     console.log(words);
+    
+// }
+// talk(2);
+// talk(4);
+// talk(8);
+
+// EVENT LOOP
+// js is a single threaded LockManager.a thread means a path of execution.the single executer is the event loop it executes the acrual Worker.
+// even though js is single threaded,it doesnt mean that it cannot outsource tasks and wait for them to come back.it do things in miltithreaded manner
+
+// CALL STACK AND CALLBACK QUEUE
+// EVENT LOOP is a process that is constantly monitoring this call stack and ehenever there are tasks to do.
+// console.log("hi there");
+// add(4,5);
+// console.log(add);
+
+// function add(x,y){
+//     return x+y;
+// }
+
+// async code goes to callback queue
+// console.log("hi there");
+// setTimeout(() => console.log("sorry i am late"), 1000);
+// console.log(add(4,5));
+
+// function add(x,y){
+//     return x+y;
+// }
+// the settimeout task gets outsourced to the browser web api.when its done,this appears in a special place: the callback quue
+// when the call stack is empty the event loop will check the callback quueue for work to do.
+// console.log("hi there");
+// setTimeout(() => console.log("sorry i am late"), 0);
+// console.log(add(4,5));
+
+// function add(x,y){
+//     return x+y;
+// }
